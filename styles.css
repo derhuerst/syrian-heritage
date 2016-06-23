@@ -13,6 +13,15 @@ a:hover { text-decoration: underline }
 
 
 
+#no-js {
+	position: fixed; top: 0; left: 0; width: 100%;
+	margin: 0; padding: 1rem; text-align: center;
+	font-size: 130%;
+	background-color: rgb(37, 251, 153); color: #333;
+}
+
+
+
 #header {
 	display: flex; padding: 3rem 0; min-height: 50vh;
 	flex-wrap: wrap; justify-content: center; align-items: center;
