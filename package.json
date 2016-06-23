@@ -1,0 +1,12 @@
+{
+	"name":        "syrian-heritage",
+	"description": "Explore Syrian heritage sites.",
+	"version":     "0.1.0",
+	"main":        "index.js",
+	"files":       ["index.js"],
+	"keywords":    ["syrian", "heritage", "todo"],
+	"author":      "Jannis R <mail@jannisr.de>",
+	"homepage":    "https://github.com/derhuerst/syrian-heritage",
+	"repository":  "derhuerst/syrian-heritage",
+	"license":     "ISC"
+}
