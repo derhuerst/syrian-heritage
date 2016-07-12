@@ -12,11 +12,11 @@ a:hover { text-decoration: underline }
 
 
 
-#no-js {
-	position: fixed; top: 0; left: 0; width: 100%;
+.notification {
+	position: fixed; top: 0; left: 0; width: 100%; z-index: 2;
 	margin: 0; padding: 1rem; text-align: center;
-	font-size: 130%;
-	background-color: rgb(37, 251, 153); color: #333;
+	font-size: 130%; color: white;
+	background-color: #e74c3c; border-bottom: 1px solid #d73c2c;
 }
 
 
