@@ -1,0 +1,110 @@
+html, body { margin: 0; padding: 0 }
+body {
+	font-size: 110%; line-height: 1.3;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	/*background-color: black;*/
+}
+
+a { color: #333; text-decoration: none }
+a:hover { text-decoration: underline }
+
+.rtl { direction: rtl }
+
+
+
+.notification {
+	position: fixed; top: 0; left: 0; width: 100%; z-index: 2;
+	margin: 0; padding: 1rem; text-align: center;
+	font-size: 130%; color: white;
+	background-color: #e74c3c; border-bottom: 1px solid #d73c2c;
+}
+
+
+
+#header {
+	display: flex; padding: 3rem 0; min-height: 50vh;
+	flex-wrap: wrap; justify-content: center; align-items: center;
+	color: white; text-shadow: .07em .05em 0 black;
+	/* CC-BY 2.0
+	   https://www.flickr.com/photos/yeowatzup/5079180729/ */
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/dd/Syrian_Desert_(5079180729).jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+#header h1 { letter-spacing: .05em }
+
+#header > section {
+	margin: 1rem; max-width: 25rem;
+}
+
+
+
+#filters {
+	position: absolute; z-index: 1; width: 100%;
+	padding: 0; background-color: rgb(30, 25, 56);
+}
+
+#filters ul {
+	list-style: none; margin: 0; padding: 0;
+}
+
+#filters a {
+	display: inline-block; text-align: center
+	font-weight: 700; color: white; line-height: 2rem;
+}
+#filters a:hover { text-decoration: none; color: rgb(37, 251, 153) }
+
+#filters > ul {
+	display: flex; justify-content: center;
+	list-style: none;
+}
+#filters > ul > li {
+	position: relative; padding: .5rem 0;
+}
+#filters > ul > li > a {
+	padding: 0 1rem;
+}
+#filters > ul > li.active > a,
+#filters > ul > li:hover > a,
+#filters > ul:hover > li.active:hover > a {
+	background-color: rgb(37, 251, 153); color: rgb(30, 25, 56);
+}
+#filters > ul:hover > li.active > a {
+	background-color: transparent; color: white;
+}
+
+#filters > ul > li > ul {
+	display: none; position: absolute; top: 3rem; left: 0;
+	min-width: 100%; padding: .5rem 0; box-sizing: border-box;
+	font-size: 85%;
+	background-color: #333;
+}
+#filters > ul > li:hover > ul { display: block }
+#filters > ul > li > ul > li { display: block }
+#filters > ul > li > ul > li > a {
+	display: block; padding: 0 1rem; color: #ddd;
+}
+#filters > ul > li > ul > li.active > a {
+	background-color: rgb(37, 251, 153); color: #333;
+}
+
+
+
+#gallery {
+	margin: 5rem auto;
+}
+
+#gallery .picture {
+	display: inline-block; margin: .1rem;
+}
+#gallery .picture:hover { text-decoration: none }
+
+#gallery .picture img {
+	display: block; max-width: 100%; box-sizing: border-box;
+	font-size: 90%;
+	background-color: #ccc;
+}
+#gallery .picture img:hover {
+	border: .5rem solid rgb(37, 251, 153);
+}
