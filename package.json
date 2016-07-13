@@ -10,14 +10,20 @@
 	"repository":  "derhuerst/syrian-heritage",
 	"license":     "ISC",
 	"devDependencies": {
+		"masonry-layout": "^4.1.0",
+		"isomorphic-fetch": "^2.2.1",
+		"lodash.groupby": "^4.4",
+		"component-emitter": "^1.2.1",
+		"history": "^3",
+
 		"browserify": "^13.0.1",
-		"uglify-js": "^2.6.4",
+		"uglify-js": "mishoo/UglifyJS2#harmony",
 		"wzrd": "^1.4"
 	},
 	"scripts": {
 		"bundle": "browserify index.js -o bundle.js",
 		"uglify": "uglifyjs -mc --mangle-props --screw-ie8 -o bundle.min.js -- bundle.js",
-		"build": "npm run bundle; npm run uglify",
+		"build": "npm run bundle && npm run uglify",
 		"dev":   "wzrd index.js:bundle.js -- --debug"
 	}
 }
