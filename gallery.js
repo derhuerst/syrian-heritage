@@ -40,7 +40,11 @@ const setData = (newPhotos) => {
 			, role: 'button'
 			, 'aria-haspopup': 'true'
 		}, [
-			dom('img', {src: photo.url})
+			dom('img', {
+				src: photo.thumb.url,
+				width: photo.thumb.width,
+				height: photo.thumb.height
+			})
 		])
 		photos.push(photo)
 	}

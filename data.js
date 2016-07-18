@@ -24,6 +24,11 @@ const data = fetch(endpoint)
 	data.photos = photos.map((p) => ({
 		  id:         p.id
 		, url:        p.Bildname
+		, thumb: {
+			  url:    p.BildSmall
+			, width:  p.width
+			, height: p.height
+		}
 		, collection: p.Collection
 		, color:      p.Color
 		, location:   p.Location
