@@ -10,7 +10,9 @@
 </head><body>
 	<p class="notification" id="no-js">JavaScript is required to use this website properly.</p>
 	<script type="application/javascript">
-		((x) => x.parentNode.removeChild(x))(document.getElementById('no-js'))
+		(function (x) {
+			x.parentNode.removeChild(x)
+		})(document.getElementById('no-js'))
 	</script>
 	<header id="header">
 		<section class="rtl">

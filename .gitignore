@@ -7,4 +7,5 @@ npm-debug.log
 
 dist
 bundle.js
+bundle.es5.js
 bundle.min.js
