@@ -4,6 +4,12 @@ body {
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	/*background-color: black;*/
 }
+@media (max-width: 50rem) {
+	body { font-size: 105% }
+}
+@media (max-width: 28rem) {
+	body { font-size: 100% }
+}
 
 a { color: #333; text-decoration: none }
 a:hover { text-decoration: underline }
@@ -22,7 +28,7 @@ a:hover { text-decoration: underline }
 
 
 #header {
-	display: flex; padding: 3rem 0; min-height: 50vh;
+	display: flex; padding: 3rem 0;
 	flex-wrap: wrap; justify-content: center; align-items: center;
 	color: white; text-shadow: .07em .05em 0 black;
 	/* CC-BY 2.0
@@ -38,6 +44,10 @@ a:hover { text-decoration: underline }
 	margin: 1rem; max-width: 25rem;
 }
 
+@media (max-width: 28rem) {
+	#header { display: block; padding: 1rem 0 }
+}
+
 
 
 #filters {
@@ -50,7 +60,7 @@ a:hover { text-decoration: underline }
 }
 
 #filters a {
-	display: inline-block; text-align: center
+	display: inline-block; text-align: center;
 	font-weight: 700; color: white; line-height: 2rem;
 }
 #filters a:hover { text-decoration: none; color: rgb(37, 251, 153) }
@@ -63,14 +73,14 @@ a:hover { text-decoration: underline }
 	position: relative; padding: .5rem 0;
 }
 #filters > ul > li > a {
-	padding: 0 1rem;
+	padding: 0 1rem; border: .2rem solid transparent;
 }
 #filters > ul > li.active > a,
-#filters > ul > li:hover > a,
-#filters > ul:hover > li.active:hover > a {
+#filters > ul > li:hover > a { border-color: rgb(37, 251, 153) }
+#filters > ul > li.active > a {
 	background-color: rgb(37, 251, 153); color: rgb(30, 25, 56);
 }
-#filters > ul:hover > li.active > a {
+#filters > ul > li:hover > a {
 	background-color: transparent; color: white;
 }
 
@@ -83,7 +93,7 @@ a:hover { text-decoration: underline }
 #filters > ul > li:hover > ul { display: block }
 #filters > ul > li > ul > li { display: block }
 #filters > ul > li > ul > li > a {
-	display: block; padding: 0 1rem; color: #ddd;
+	display: block; padding: 0 1rem; color: #ddd; white-space: nowrap;
 }
 #filters > ul > li > ul > li.active > a {
 	background-color: rgb(37, 251, 153); color: #333;
@@ -91,8 +101,19 @@ a:hover { text-decoration: underline }
 
 
 
+@media (max-width: 28rem), handheld, (hover: none) {
+	#filters { position: static; z-index: 1 }
+	#filters > ul { display: block }
+	#filters > ul > li { display: block; text-align: center }
+	#filters > ul > li > a { display: block }
+	#filters > ul > li > ul { position: static }
+	#filters > ul > li:hover > a { border-color: transparent }
+}
+
+
+
 #gallery {
-	margin: 5rem auto;
+	margin: 5rem auto 2rem auto;
 }
 
 #gallery .picture {
@@ -106,5 +127,13 @@ a:hover { text-decoration: underline }
 	background-color: #ccc;
 }
 #gallery .picture img:hover {
-	border: .5rem solid rgb(37, 251, 153);
+	border: .2rem solid rgb(37, 251, 153);
 }
+
+
+
+#footer {
+	padding: 3rem; background-color: rgb(30, 25, 56);
+	text-align: center; vertical-align: top;
+}
+#footer > * { margin: .5rem; vertical-align: top }

@@ -10,7 +10,9 @@
 </head><body>
 	<p class="notification" id="no-js">JavaScript is required to use this website properly.</p>
 	<script type="application/javascript">
-		((x) => x.parentNode.removeChild(x))(document.getElementById('no-js'))
+		(function (x) {
+			x.parentNode.removeChild(x)
+		})(document.getElementById('no-js'))
 	</script>
 	<header id="header">
 		<section class="rtl">
@@ -26,6 +28,12 @@
 	</header>
 	<nav id="filters"><ul></ul></nav>
 	<main id="gallery"></main>
+	<footer id="footer">
+		<img src="http://placehold.it/150x50/1E1938/fff" alt="Foo-Bar-Institut">
+		<img src="http://placehold.it/50x50/1E1938/fff" alt="Foo-Bar-Institut">
+		<img src="http://placehold.it/100x70/1E1938/fff" alt="Foo-Bar-Institut">
+		<img src="http://placehold.it/300x50/1E1938/fff" alt="Foo-Bar-Institut">
+	</footer>
 	<script type="application/javascript" src="bundle.min.js"></script>
 </body>
 </html>
