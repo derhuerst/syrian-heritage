@@ -29,7 +29,7 @@ a:hover { text-decoration: underline }
 
 
 #header {
-	display: flex; padding: 3rem 0; min-height: 50vh;
+	display: flex; padding: 3rem 0;
 	flex-wrap: wrap; justify-content: center; align-items: center;
 	color: white; text-shadow: .07em .05em 0 black;
 	/* CC-BY 2.0
@@ -61,7 +61,7 @@ a:hover { text-decoration: underline }
 }
 
 #filters a {
-	display: inline-block; text-align: center
+	display: inline-block; text-align: center;
 	font-weight: 700; color: white; line-height: 2rem;
 }
 #filters a:hover { text-decoration: none; color: rgb(37, 251, 153) }
@@ -128,5 +128,5 @@ a:hover { text-decoration: underline }
 	background-color: #ccc;
 }
 #gallery .picture img:hover {
-	border: .5rem solid rgb(37, 251, 153);
+	border: .2rem solid rgb(37, 251, 153);
 }

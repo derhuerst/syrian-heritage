@@ -61,7 +61,9 @@ const masonry = new Masonry(gallery, {
 })
 
 const applyQuery = (query) => {
-	for (let shown of gallery.childNodes) gallery.removeChild(shown)
+	// gallery.childNodes is a NodeList, which does not support Symbol.iterator in every browser.
+	for (let shown of Array.from(gallery.childNodes))
+		gallery.removeChild(shown)
 
 	const matches = matcher(query)
 	const toBeShown = []
