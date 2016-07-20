@@ -1,5 +1,6 @@
 html, body { margin: 0; padding: 0 }
 body {
+	margin-bottom: 15rem;
 	font-size: 110%; line-height: 1.3;
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	/*background-color: black;*/

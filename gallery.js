@@ -36,7 +36,8 @@ const setData = (newPhotos) => {
 		photo = Object.create(photo)
 		photo.el = dom('a', {
 			  class: 'picture'
-			, href: '#'
+			, href: photo.url
+			, target: '_blank'
 			, role: 'button'
 			, 'aria-haspopup': 'true'
 		}, [
@@ -70,6 +71,8 @@ const applyQuery = (query) => {
 
 	for (let el of toBeShown) gallery.appendChild(el)
 	masonry.appended(toBeShown)
+	masonry.reloadItems()
+	masonry.layout()
 }
 
 module.exports = {setData, applyQuery}
