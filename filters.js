@@ -26,15 +26,19 @@ const data = (el, key, value) => value
 const onValueClick = (e) => {
 	e.preventDefault()
 	e.stopPropagation()
-	const q = {}
-	q[data(e.target, 'name')] = data(e.target, 'value')
-	qs.add(q)
+	const name = data(e.target, 'name')
+	const value = data(e.target, 'value')
+	if (qs.current[name] === value) qs.remove(name)
+	else {
+		const q = {}
+		q[name] = value
+		qs.add(q)
+	}
 }
 
 const onFilterClick = (e) => {
 	e.preventDefault()
 	e.stopPropagation()
-	qs.remove(data(e.target, 'name'))
 }
 
 
