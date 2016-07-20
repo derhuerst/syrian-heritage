@@ -60,16 +60,13 @@ const masonry = new Masonry(gallery, {
 })
 
 const applyQuery = (query) => {
-	console.log('applyQuery', query)
 	for (let shown of gallery.childNodes) gallery.removeChild(shown)
 
 	const matches = matcher(query)
 	const toBeShown = []
 	for (let photo of photos) {
-		console.log(query, photo)
 		if (matches(photo)) toBeShown.push(photo.el)
 	}
-	console.log('toBeShown', toBeShown)
 
 	for (let el of toBeShown) gallery.appendChild(el)
 	masonry.appended(toBeShown)

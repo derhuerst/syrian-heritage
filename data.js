@@ -10,11 +10,7 @@ const filters = ['collection', 'color', 'location', 'motif', 'view']
 
 
 
-const err = (res) => {
-	const e = new Error(res.statusText)
-	e.statusCode = res.status
-	throw e
-}
+const err = (e) => {throw e}
 
 const data = fetch(endpoint)
 .then((res) => res.json(), err)

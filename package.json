@@ -22,7 +22,7 @@
 	},
 	"scripts": {
 		"bundle": "browserify index.js -o bundle.js",
-		"uglify": "uglifyjs -mc --mangle-props --screw-ie8 -o bundle.min.js -- bundle.js",
+		"uglify": "uglifyjs -mc --screw-ie8 -o bundle.min.js -- bundle.js",
 		"build": "npm run bundle && npm run uglify",
 		"dev":   "wzrd index.js:bundle.min.js -- --debug",
 		"deploy": "cp index.html styles.css bundle.min.js dist && ./deploy"

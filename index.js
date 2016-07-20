@@ -17,4 +17,7 @@ const main = (data) => {
 	gallery.setData(data.photos)
 }
 
-data.then(main, (e) => notify(e.message))
+data.then(main, (e) => {
+	console.log(e)
+	notify(e.message)
+})
