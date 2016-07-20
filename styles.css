@@ -1,20 +1,19 @@
 html, body { margin: 0; padding: 0 }
 body {
-	font-size: 110%; line-height: 1.3;
-	font-family: "Helvetica Neue", Helvetica, sans-serif;
-	/*background-color: black;*/
+	font-size: 105%; line-height: 1.3;
+	font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, sans-serif;
 }
 @media (max-width: 50rem) {
 	body { font-size: 105% }
 }
 @media (max-width: 28rem) {
-	body { font-size: 100% }
+	body { font-size: 95% }
 }
 
 a { color: #333; text-decoration: none }
 a:hover { text-decoration: underline }
 
-.rtl { direction: rtl }
+.arabic { direction: rtl; font-family: 'Droid Arabic Kufi', sans-serif }
 
 
 
