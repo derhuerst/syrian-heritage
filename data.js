@@ -6,7 +6,7 @@ const groupBy = require('lodash.groupBy')
 
 
 const endpoint = 'http://199.217.112.113:8080/picture/picture'
-const filters = ['decade', 'collection', 'color', 'location', 'motif', 'view']
+const filters = ['decade', 'color', 'subject', 'view', 'collection', 'location']
 
 
 
@@ -25,12 +25,11 @@ const data = fetch(endpoint)
 			, width:  p.width
 			, height: p.height
 		}
-		, year:       p.Decade
 		, decade:     ((p.Decade - p.Decade % 10) || '?').toString()
 		, collection: p.Collection
 		, color:      p.Color.toLowerCase()
 		, location:   p.Location
-		, motif:      p.Subject
+		, subject: 	  p.Subject
 		, view:       p.View
 	}))
 
