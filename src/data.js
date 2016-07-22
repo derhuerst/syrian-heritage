@@ -10,33 +10,35 @@ const filters = ['decade', 'color', 'subject', 'view', 'collection', 'location']
 
 
 
+const clean = (data) => ({
+	  id:         p.id
+	, url:        p.Bildname
+	, thumb: {
+		  url:    p.BildSmall
+		, width:  p.width
+		, height: p.height
+	}
+	, decade:     ((p.Decade - p.Decade % 10) || '?').toString()
+	, collection: p.Collection
+	, color:      p.Color.toLowerCase()
+	, location:   p.Location
+	, subject: 	  p.Subject
+	, view:       p.View
+})
+
+
+
 const err = (e) => {throw e}
 
 const data = fetch(endpoint)
 .then((res) => res.json(), err)
 .then((photos) => {
+	photos = photos.map(clean)
+
 	const data = {}
-
-	data.photos = photos.map((p) => ({
-		  id:         p.id
-		, url:        p.Bildname
-		, thumb: {
-			  url:    p.BildSmall
-			, width:  p.width
-			, height: p.height
-		}
-		, decade:     ((p.Decade - p.Decade % 10) || '?').toString()
-		, collection: p.Collection
-		, color:      p.Color.toLowerCase()
-		, location:   p.Location
-		, subject: 	  p.Subject
-		, view:       p.View
-	}))
-
 	for (let filter of filters)
 		data[filter] = groupBy(data.photos, (p) => p[filter])
 
-	data.filters = filters
 	return data
 }, err)
 

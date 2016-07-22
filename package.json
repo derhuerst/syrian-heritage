@@ -13,7 +13,6 @@
 		"masonry-layout": "^4.1.0",
 		"isomorphic-fetch": "^2.2.1",
 		"lodash.groupby": "^4.4",
-		"component-emitter": "^1.2.1",
 		"history": "^3",
 
 		"browserify": "^13.0.1",
@@ -23,11 +22,11 @@
 		"wzrd": "^1.4"
 	},
 	"scripts": {
-		"bundle": "browserify index.js -o bundle.js",
+		"bundle": "browserify src/index.js -o bundle.js",
 		"transpile": "babel bundle.js -o bundle.es5.js",
 		"uglify": "uglifyjs -mc --screw-ie8 -o bundle.min.js -- bundle.es5.js",
 		"build": "npm run bundle && npm run transpile && npm run uglify",
-		"dev":   "wzrd index.js:bundle.min.js -- --debug",
+		"dev":   "wzrd src/index.js:bundle.min.js -- --debug",
 		"deploy": "cp -r index.html styles.css bundle.min.js assets dist && ./deploy"
 	}
 }
