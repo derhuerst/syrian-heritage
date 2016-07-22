@@ -10,12 +10,6 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans"/>
 	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/droidarabickufi.css"/>
 </head><body>
-	<p class="notification" id="no-js">JavaScript is required to use this website properly.</p>
-	<script type="application/javascript">
-		(function (x) {
-			x.parentNode.removeChild(x)
-		})(document.getElementById('no-js'))
-	</script>
 	<header id="header">
 		<section class="arabic">
 			<h1>فسيفساء سورية</h1>
@@ -25,13 +19,15 @@
 			<h1>Syrian Mosaic</h1>
 			<p>The visualization of the database of the Syrian Heritage Archive aims to ensure that Syrian cultural heritage is not forgotten. Thanks to digitisation of databases, it may act as a basis for any prospective reconstruction.</p>
 		</section>
-		<section id="kalli"><img src="assets/anfang_.png" alt="begin" height="59px" width="62px"></section>
+		<div class="kalli">
+			<img src="assets/anfang_.png" alt="begin"/>
+		</div>
 	</header>
 	<nav id="filters"><ul></ul></nav>
 	<main id="gallery"></main>
 	<footer id="footer">
-		<div id="kalli">
-			<img src="assets/ende_.png" alt="end" height="59px" width="62px">
+		<div class="kalli">
+			<img src="assets/ende_.png" alt="end"/>
 		</div>
 		<img src="assets/f_iag.png" alt="IAG">
 		<img src="assets/f_un.png" alt="UN">
@@ -40,6 +36,12 @@
 		<img src="assets/f_sha.png" alt="SHA">
 		<img src="assets/f_fhp.png" alt="FHP">
 	</footer>
+	<p class="notification" id="no-js">JavaScript is required to use this website properly.</p>
+	<script type="application/javascript">
+		(function (x) {
+			x.parentNode.removeChild(x)
+		})(document.getElementById('no-js'))
+	</script>
 	<script type="application/javascript" src="bundle.min.js"></script>
 </body>
 </html>

@@ -15,9 +15,10 @@ a:hover { text-decoration: underline }
 
 .arabic { direction: rtl; font-family: 'Droid Arabic Kufi', sans-serif }
 
-#kalli {
-	padding-bottom: 3rem;
-}
+.kalli { flex-basis: 100%; text-align: center }
+#header .kalli { padding-top: 2rem }
+#footer .kalli { padding-bottom: 2rem }
+.kalli img { width: 4rem; height: 4rem }
 
 .notification {
 	position: fixed; top: 0; left: 0; width: 100%; z-index: 2;
@@ -32,9 +33,7 @@ a:hover { text-decoration: underline }
 	display: flex; padding: 3rem 0;
 	flex-wrap: wrap; justify-content: center; align-items: center;
 	color: white; text-shadow: .07em .05em 0 #1E223A;
-	/* CC-BY 2.0
-	   https://www.flickr.com/photos/yeowatzup/5079180729/ */
-	background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/dd/Syrian_Desert_(5079180729).jpg');
+	background-image: url('../assets/background.png');
 	background-position: center;
 	background-size: cover;
 }
