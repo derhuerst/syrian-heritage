@@ -33,9 +33,7 @@ a:hover { text-decoration: underline }
 	display: flex; padding: 3rem 0;
 	flex-wrap: wrap; justify-content: center; align-items: center;
 	color: white; text-shadow: .07em .05em 0 #1E223A;
-	/* CC-BY 2.0
-	   https://www.flickr.com/photos/yeowatzup/5079180729/ */
-	background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/dd/Syrian_Desert_(5079180729).jpg');
+	background-image: url('../assets/background.png');
 	background-position: center;
 	background-size: cover;
 }
