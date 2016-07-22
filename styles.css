@@ -15,9 +15,10 @@ a:hover { text-decoration: underline }
 
 .arabic { direction: rtl; font-family: 'Droid Arabic Kufi', sans-serif }
 
-#kalli {
-	padding-bottom: 3rem;
-}
+.kalli { flex-basis: 100%; text-align: center }
+#header .kalli { padding-top: 2rem }
+#footer .kalli { padding-bottom: 2rem }
+.kalli img { width: 4rem; height: 4rem }
 
 .notification {
 	position: fixed; top: 0; left: 0; width: 100%; z-index: 2;
@@ -39,26 +40,27 @@ a:hover { text-decoration: underline }
 	background-size: cover;
 }
 
-#header h1 { 
+#header h1 {
+	margin: 0; padding: .8em 0 0 0;
 	letter-spacing: .02em;
-    font-size: 5em;
-    font-weight: bold;
-    -webkit-margin-before: 2em;
-    -webkit-margin-after: 0.3em;
+	font-size: 5em;
+	font-weight: bold;
+	-webkit-margin-before: 2em;
+	-webkit-margin-after: .3em;
+}
+#header h1::after {
+	display: block; content: ' ';
+	margin-top: .8em;
+	width: 70%; height: .8rem;
+	background-color: #34FC8A;
 }
 
-#header > section.arabic > h1 {
+#header .arabic h1 {
 	-webkit-margin-before: 0em;
 }
 
 #header > section {
 	margin: 1rem; max-width: 25rem;
-}
-
-#rectangle {
-	width: 275px;
-	height: 10px;
-	background: #34FC8A;
 }
 
 @media (max-width: 28rem) {
@@ -126,11 +128,6 @@ a:hover { text-decoration: underline }
 	#filters > ul > li > ul { position: static }
 	#filters > ul > li:hover > a { border-color: transparent }
 }
- 
-/* hat irgendwie auch globale auswirkungen. */
-/*#header h1 {
-    -webkit-margin-before: 0em;
-} */
 
 
 #gallery {
