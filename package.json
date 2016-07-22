@@ -28,6 +28,6 @@
 		"uglify": "uglifyjs -mc --screw-ie8 -o bundle.min.js -- bundle.es5.js",
 		"build": "npm run bundle && npm run transpile && npm run uglify",
 		"dev":   "wzrd index.js:bundle.min.js -- --debug",
-		"deploy": "cp index.html styles.css bundle.min.js dist && ./deploy"
+		"deploy": "cp -r index.html styles.css bundle.min.js assets dist && ./deploy"
 	}
 }
