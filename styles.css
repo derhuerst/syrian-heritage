@@ -33,7 +33,7 @@ a:hover { text-decoration: underline }
 	display: flex; padding: 3rem 0;
 	flex-wrap: wrap; justify-content: center; align-items: center;
 	color: white; text-shadow: .07em .05em 0 #1E223A;
-	background-image: url('../assets/background.png');
+	background-image: url('assets/background.png');
 	background-position: center;
 	background-size: cover;
 }
