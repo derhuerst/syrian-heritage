@@ -15,7 +15,9 @@ a:hover { text-decoration: underline }
 
 .arabic { direction: rtl; font-family: 'Droid Arabic Kufi', sans-serif }
 
-
+#kalli {
+	padding-bottom: 3rem;
+}
 
 .notification {
 	position: fixed; top: 0; left: 0; width: 100%; z-index: 2;
@@ -29,7 +31,7 @@ a:hover { text-decoration: underline }
 #header {
 	display: flex; padding: 3rem 0;
 	flex-wrap: wrap; justify-content: center; align-items: center;
-	color: white; text-shadow: .07em .05em 0 black;
+	color: white; text-shadow: .07em .05em 0 #1E223A;
 	/* CC-BY 2.0
 	   https://www.flickr.com/photos/yeowatzup/5079180729/ */
 	background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/dd/Syrian_Desert_(5079180729).jpg');
@@ -37,10 +39,26 @@ a:hover { text-decoration: underline }
 	background-size: cover;
 }
 
-#header h1 { letter-spacing: .05em }
+#header h1 { 
+	letter-spacing: .02em;
+    font-size: 5em;
+    font-weight: bold;
+    -webkit-margin-before: 2em;
+    -webkit-margin-after: 0.3em;
+}
+
+#header > section.arabic > h1 {
+	-webkit-margin-before: 0em;
+}
 
 #header > section {
 	margin: 1rem; max-width: 25rem;
+}
+
+#rectangle {
+	width: 275px;
+	height: 10px;
+	background: #34FC8A;
 }
 
 @media (max-width: 28rem) {
@@ -108,7 +126,11 @@ a:hover { text-decoration: underline }
 	#filters > ul > li > ul { position: static }
 	#filters > ul > li:hover > a { border-color: transparent }
 }
-
+ 
+/* hat irgendwie auch globale auswirkungen. */
+/*#header h1 {
+    -webkit-margin-before: 0em;
+} */
 
 
 #gallery {
