@@ -30,7 +30,7 @@ let dom = menu(null, [], noop, noop)
 const render = (currentCat, allCats, setCat, clearCat) => {
 	const newDom = menu(currentCat, allCats, setCat, clearCat)
 	yo.update(dom, newDom)
-	dom = newDom
+	return dom = newDom
 }
 
 module.exports = render

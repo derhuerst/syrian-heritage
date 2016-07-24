@@ -11,19 +11,19 @@ const filters = ['decade', 'color', 'subject', 'view', 'collection', 'location']
 
 
 const clean = (data) => ({
-	  id:         p.id
-	, url:        p.Bildname
+	  id:         data.id
+	, url:        data.Bildname
 	, thumb: {
-		  url:    p.BildSmall
-		, width:  p.width
-		, height: p.height
+		  url:    data.BildSmall
+		, width:  data.width
+		, height: data.height
 	}
-	, decade:     ((p.Decade - p.Decade % 10) || '?').toString()
-	, collection: p.Collection
-	, color:      p.Color.toLowerCase()
-	, location:   p.Location
-	, subject: 	  p.Subject
-	, view:       p.View
+	, decade:     ((data.Decade - data.Decade % 10) || '?').toString()
+	, collection: data.Collection
+	, color:      data.Color.toLowerCase()
+	, location:   data.Location
+	, subject: 	  data.Subject
+	, view:       data.View
 })
 
 

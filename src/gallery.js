@@ -41,9 +41,9 @@ const gallery = (photosByType) => yo `
 let dom = gallery({})
 
 const render = (photosByType) => {
-	const newDom = render(photosByType)
+	const newDom = gallery(photosByType)
 	yo.update(dom, newDom)
-	dom = newDom
+	return dom = newDom
 }
 
 module.exports = render
