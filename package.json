@@ -10,6 +10,7 @@
 	"repository":  "derhuerst/syrian-heritage",
 	"license":     "ISC",
 	"devDependencies": {
+		"reselect": "^2.5.3",
 		"yo-yo": "^1.2.2",
 		"masonry-layout": "^4.1.0",
 		"isomorphic-fetch": "^2.2.1",
