@@ -21,7 +21,6 @@ const ui = (setCategory, clearCategory) => {
 		gallery
 	)
 
-	// todo: append initial rendering to dom
 	return (state) => {
 		renderMenu(state)
 		renderGallery(state)

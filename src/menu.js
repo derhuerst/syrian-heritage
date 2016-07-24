@@ -25,11 +25,11 @@ const menu = (currentCat, allCats, setCat, clearCat) => yo `
 
 const noop = () => {}
 let dom = menu(null, [], noop, noop)
+document.querySelector('#menu').appendChild(dom)
 
 const render = (currentCat, allCats, setCat, clearCat) => {
 	const newDom = menu(currentCat, allCats, setCat, clearCat)
 	yo.update(dom, newDom)
-	return dom
 }
 
 module.exports = render

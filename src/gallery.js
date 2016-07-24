@@ -30,6 +30,7 @@ const gallery = (photosByType) => {
 
 
 let dom = gallery({})
+document.querySelector('#gallery').appendChild(dom)
 
 const render = (photosByType) => {
 	const newDom = gallery(photosByType)
