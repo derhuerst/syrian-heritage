@@ -15,7 +15,7 @@ const photos = (state) => state.photos
 
 const photosOfCategory = selector(
 	[photos, category],
-	(photos, category) => photos[category] || []
+	(photos, category) => photos[category] || {}
 )
 
 module.exports = {category, categories, photos, photosOfCategory}

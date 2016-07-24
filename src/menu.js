@@ -14,11 +14,10 @@ const menu = (currentCat, allCats, setCat, clearCat) => yo `
 				else setCat(cat)
 			}
 			return yo `
-			<li ${currentCat === cat ? 'class="active"' : ''}>
+			<li class="${currentCat === cat ? 'active' : ''}">
 				<a href="#" role="button" aria-haspopup="true"
-				   onclick="${onClick}">${cat}</a>
-			</li>
-			`
+				   onclick=${onClick}>${cat}</a>
+			</li>`
 		})}
 	<ul>`
 
@@ -30,7 +29,7 @@ let dom = menu(null, [], noop, noop)
 const render = (currentCat, allCats, setCat, clearCat) => {
 	const newDom = menu(currentCat, allCats, setCat, clearCat)
 	yo.update(dom, newDom)
-	return dom = newDom
+	return dom
 }
 
 module.exports = render

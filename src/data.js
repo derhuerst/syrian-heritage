@@ -37,7 +37,7 @@ const data = fetch(endpoint)
 
 	const data = {}
 	for (let filter of filters)
-		data[filter] = groupBy(data.photos, (p) => p[filter])
+		data[filter] = groupBy(photos, (p) => p[filter])
 
 	return data
 }, err)

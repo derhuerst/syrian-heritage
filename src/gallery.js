@@ -16,15 +16,12 @@ const values = (obj) => {
 const photo = (photo) => yo `
 	<a class="picture" href="${photo.url}" target="_blank"
 	   role="button" aria-haspopup="true">
-		<img src="${photo.thumb.url}
+		<img src="${photo.thumb.url}"
 		     width="${photo.thumb.width}" height="${photo.thumb.height}"/>
 	</a>`
 
 const cluster = (photos) => {
-	const dom = yo `
-		<section class="cluster">
-			${photos.map(photo)}
-		</section>`
+	const dom = yo `<section class="cluster">${photos.map(photo)}</section>`
 	const masonry = new Masonry(dom, {fitWidth: true, transitionDuration: 0})
 	masonry.appended(dom.childNodes)
 	masonry.layout()
@@ -43,7 +40,7 @@ let dom = gallery({})
 const render = (photosByType) => {
 	const newDom = gallery(photosByType)
 	yo.update(dom, newDom)
-	return dom = newDom
+	return dom
 }
 
 module.exports = render

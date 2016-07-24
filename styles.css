@@ -92,7 +92,8 @@ a:hover { text-decoration: underline }
 }
 #menu ul li.active a,
 #menu ul li:hover a { border-color: rgb(37, 251, 153) }
-#menu ul li.active a {
+#menu ul li.active a,
+#menu ul li.active:hover a {
 	background-color: rgb(37, 251, 153); color: rgb(30, 25, 56);
 }
 #menu ul li:hover a {
