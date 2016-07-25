@@ -114,6 +114,8 @@ a:hover { text-decoration: underline }
 	margin: 5rem auto 2rem auto;
 }
 
+#gallery .cluster { position: relative; margin-bottom: 5rem }
+
 #gallery .picture {
 	display: inline-block; margin: .1rem;
 }

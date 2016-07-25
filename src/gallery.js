@@ -5,14 +5,6 @@ const Masonry = require('masonry-layout')
 
 
 
-const values = (obj) => {
-	const r = []
-	for (let key in obj) r.push(obj[key])
-	return r
-}
-
-
-
 const photo = (photo) => yo `
 	<a class="picture" href="${photo.url}" target="_blank"
 	   role="button" aria-haspopup="true">
@@ -20,18 +12,20 @@ const photo = (photo) => yo `
 		     width="${photo.thumb.width}" height="${photo.thumb.height}"/>
 	</a>`
 
-const cluster = (photos) => {
-	const dom = yo `<section class="cluster">${photos.map(photo)}</section>`
-	const masonry = new Masonry(dom, {fitWidth: true, transitionDuration: 0})
-	masonry.appended(dom.childNodes)
-	masonry.layout()
-	return dom
-}
+const heading = (type) => yo `
+	<h2>${type}</h2>`
 
-const gallery = (photosByType) => yo `
-	<div>
-		${values(photosByType).map(cluster)}
-	<div>`
+const cluster = (photos) => yo `
+	<section class="cluster">${photos.map(photo)}</section>`
+
+const gallery = (photosByType) => {
+	const children = []
+	for (let type in photosByType) {
+		children.push(heading(type))
+		children.push(cluster(photosByType[type]))
+	}
+	return yo `<div>${children}<div>`
+}
 
 
 
@@ -40,7 +34,9 @@ let dom = gallery({})
 const render = (photosByType) => {
 	const newDom = gallery(photosByType)
 	yo.update(dom, newDom)
-	return dom
+
+	for (let cluster of dom.querySelectorAll('.cluster'))
+		new Masonry(cluster, {fitWidth: true, transitionDuration: 0}).layout()
 }
 
 module.exports = render
