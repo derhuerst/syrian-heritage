@@ -2,9 +2,10 @@
 
 const createStore = require('redux/lib/createStore').default
 
-const actions = require('./actions')
-const ui = require('./ui')
 const reducer = require('./reducer')
+const actions = require('./actions')
+const url = require('./url')
+const ui = require('./ui')
 const data = require('./data')
 
 
@@ -14,17 +15,15 @@ const store = createStore(reducer)
 const setCategory = actions.setCategory(store)
 const clearCategory = actions.clearCategory(store)
 
+const updateUrl = url(setCategory, clearCategory)
 const render = ui(setCategory, clearCategory)
-store.subscribe(() => render(store.getState()))
+
+store.subscribe(() => setTimeout(() => {
+	const state = store.getState()
+	updateUrl(state)
+	render(state)
+}, 1))
 
 
 
-data.then(actions.setPhotos(store), (e) => {
-	// todo
-	// notify(e.message)
-	throw e
-})
-
-
-
-// todo: watch & update querystring
+data.then(actions.setPhotos(store), (e) => {throw e})
