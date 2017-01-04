@@ -1,7 +1,7 @@
 'use strict'
 
 const selector = require('reselect').createSelector
-const createHistory = require('history/lib/createBrowserHistory').default
+const createHistory = require('history/createBrowserHistory').default
 
 const selectors = require('./selectors')
 
