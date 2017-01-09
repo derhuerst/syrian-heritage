@@ -1,7 +1,7 @@
 'use strict'
 
 const fetch = require('isomorphic-fetch')
-const groupBy = require('lodash.groupBy')
+const groupBy = require('lodash.groupby')
 
 
 
