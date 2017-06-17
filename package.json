@@ -23,7 +23,7 @@
 		"browserify": "^14.2.0",
 		"babel-cli": "^6.18.0",
 		"babel-preset-es2015": "^6.18.0",
-		"uglify-js": "mishoo/UglifyJS2#harmony",
+		"uglify-es": "^3.0.17",
 		"wzrd": "^1.5"
 	},
 	"scripts": {
